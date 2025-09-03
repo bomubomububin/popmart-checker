@@ -1,7 +1,9 @@
 import time
 import json
-import requests  # LINE通知のためにrequestsライブラリを使用
+import requests
+import os
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -42,7 +44,15 @@ def send_line_notification(token, message):
 def check_stock_with_selenium():
     """Seleniumを使って在庫状況をチェックするメインの関数"""
     print("--- POP MART 在庫チェッカー (LINE通知モード) を起動しました ---")
-
+    
+ # GitHub Actionsでブラウザを動かすための設定
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
+    
     while True:
         driver = None
         try:
@@ -98,5 +108,6 @@ def check_stock_with_selenium():
 
 if __name__ == "__main__":
     check_stock_with_selenium()
+
 
 
