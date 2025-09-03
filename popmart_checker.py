@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # --- 設定項目 ---
 URL = "https://www.popmart.com/jp/products/5312/THE-MONSTERS-I-FOUND-YOU-"
-CHECK_INTERVAL_SECONDS = 15
+CHECK_INTERVAL_SECONDS = 10
 
 # 【重要】ここに、先ほど取得したLINEのチャネルアクセストークンを貼り付けてください
 LINE_CHANNEL_ACCESS_TOKEN = "LINE_TOKEN"
@@ -108,6 +108,7 @@ def check_stock_with_selenium():
 
 if __name__ == "__main__":
     check_stock_with_selenium()
+
 
 
 
