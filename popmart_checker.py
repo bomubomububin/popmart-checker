@@ -74,7 +74,7 @@ def check_stock_with_selenium():
 
             sold_out_elements = driver.find_elements(By.XPATH, "//*[normalize-space()='再入荷を通知']")
             
-            if not sold_out_elements:
+            if sold_out_elements:
                 print("🎉 在庫が復活しました！LINEに通知を送信します。")
                 # デスクトップ通知の代わりにLINE通知関数を呼び出す
                 send_line_notification(
@@ -98,3 +98,4 @@ def check_stock_with_selenium():
 
 if __name__ == "__main__":
     check_stock_with_selenium()
+
