@@ -27,9 +27,6 @@ jobs:
         with:
           python-version: '3.11'
 
-      # 3. Chromeブラウザをセットアップ
-      - name: Set up Chrome
-        uses: browser-actions/setup-chrome@v1
 
       # 4. 必要なPythonライブラリをインストール
       - name: Install dependencies
