@@ -13,7 +13,7 @@ URL = "https://www.popmart.com/jp/products/5312/THE-MONSTERS-I-FOUND-YOU-"
 CHECK_INTERVAL_SECONDS = 10
 
 # 【重要】ここに、先ほど取得したLINEのチャネルアクセストークンを貼り付けてください
-LINE_CHANNEL_ACCESS_TOKEN = "LINE_TOKEN"
+LINE_TOKEN = "LINE_TOKEN"
 
 # --- ここから下は変更不要です ---
 
@@ -88,7 +88,7 @@ def check_stock_with_selenium():
                 print("🎉 在庫が復活しました！LINEに通知を送信します。")
                 # デスクトップ通知の代わりにLINE通知関数を呼び出す
                 send_line_notification(
-                    LINE_CHANNEL_ACCESS_TOKEN,
+                    LINE_TOKEN,
                     f"在庫が復活しました！\n商品ページを確認してください。\n{URL}"
                 )
                 break
@@ -108,6 +108,7 @@ def check_stock_with_selenium():
 
 if __name__ == "__main__":
     check_stock_with_selenium()
+
 
 
 
