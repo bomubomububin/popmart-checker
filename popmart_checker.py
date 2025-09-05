@@ -13,7 +13,7 @@ URL = "https://www.popmart.com/jp/products/5312/THE-MONSTERS-I-FOUND-YOU-"
 CHECK_INTERVAL_SECONDS = 10
 
 # 【重要】ここに、先ほど取得したLINEのチャネルアクセストークンを貼り付けてください
-LINE_CHANNEL_ACCESS_TOKEN = "lycs0B3gz2gX9YQwvSgl6opvMK9m0IocCaRNp8Vs2cG0S17/872dzzcPnFFIzYSyHU4mwhPQKxvInVbdS/WgWGVz3dw+JweRU05USkmxsd7VnPi7+lD/i2/qrpMSGSVBSHMPVZUJLrC4dF9qkMYG8AdB04t89/1O/w1cDnyilFU="
+LINE_CHANNEL_ACCESS_TOKEN = "LINE_TOKEN"
 
 # --- ここから下は変更不要です ---
 
@@ -108,6 +108,7 @@ def check_stock_with_selenium():
 
 if __name__ == "__main__":
     check_stock_with_selenium()
+
 
 
 
