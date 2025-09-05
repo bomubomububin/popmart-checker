@@ -38,5 +38,5 @@ jobs:
       - name: Run stock checker
         env:
           # GitHub Secretsに保存したLINEトークンをプログラムに渡す
-          LINE_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_TOKEN: ${{ secrets.LINE_TOKEN }}
         run: python popmart_checker.py
